@@ -1,1 +1,1 @@
-// password generator in C
+// password generator in R
