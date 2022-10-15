@@ -1,0 +1,37 @@
+clear()
+clc()
+
+// Define character set
+lowCase = "abcdefghijklmnopqrstuvxyz";
+upCase = "ABCDEFGHIJKLMNOPQRSTUVXYZ";
+Numbers = "0123456789";
+SpecialChar = "£$&()*+[]@#^-_!?";
+charCategories = 4;
+
+// Define password length
+passLength = 8;
+
+// Initialize password
+password="";
+
+// FOR loop
+for i=1:passLength
+    chooseCharGroup = round(abs(rand()*(charCategories-1)));
+    select chooseCharGroup
+    case 0
+        index = round(abs(rand()*(length(lowCase)-1)));
+        password=password + part(lowCase,index+1);
+    case 1
+        index = round(abs(rand()*(length(upCase)-1)));
+        password=password + part(upCase,index+1);
+    case 2
+        index = round(abs(rand()*(length(Numbers)-1)));
+        password=password + part(Numbers,index+1);
+    case 3
+        index = round(abs(rand()*(length(SpecialChar)-1)));
+        password = password + part(SpecialChar,index+1);
+    end
+end
+
+// Display password in console
+disp(password)
