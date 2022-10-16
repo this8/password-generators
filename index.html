@@ -10,16 +10,133 @@
             background-image: linear-gradient(to right top, #051937, #004d7a, #008793, #00bf72, #a8eb12);
             height: 100vh;
         }
+
+        .row{
+            display: flex;
+        }
+
+        .about{
+            width: 50vw;
+            padding-left: 15vw;
+            padding-right: 20vw;
+        }
+        .quicklinks a{
+            text-decoration: none;
+            background-color: rgba(165, 42, 42, 0);
+            margin-left: 2vw;
+            padding: 0;
+            line-height: 20px;
+        }
+
+
+        .copyright-text{
+            padding-left: 15vw;
+        }
+
+        .copyright-text a{
+            padding: 0%;
+            background-color: #004d7a00;
+        }
+
+         
+        .site-footer
+        {
+            position: relative;
+            bottom: 0;
+            z-index: -1;
+            top: 10vh;
+          background-color:#0d220e;
+          padding:45px 0 20px;
+          font-size:15px;
+          line-height:24px;
+          color:#737373;
+        }
+        .site-footer hr
+        {
+          border-top-color:#bbb;
+          opacity:0.5
+        }
+        .site-footer hr.small
+        {
+          margin:20px 0
+        }
+        .site-footer h6
+        {
+          color:#fff;
+          font-size:16px;
+          text-transform:uppercase;
+          margin-top:5px;
+          letter-spacing:2px
+        }
+        .site-footer a
+        {
+          color:#737373;
+        }
+        .site-footer a:hover
+        {
+          color:#3366cc;
+          text-decoration:none;
+        }
+        .footer-links
+        {
+          padding-left:0;
+          list-style:none
+        }
+        .footer-links li
+        {
+          display:block
+        }
+        .footer-links a
+        {
+          color:#737373
+        }
+        .footer-links a:active,.footer-links a:focus,.footer-links a:hover
+        {
+          color:#3366cc;
+          text-decoration:none;
+        }
+        .footer-links.inline li
+        {
+          display:inline-block
+        }
+       
+        .copyright-text
+        {
+          margin:0
+        }
+        @media (max-width:991px)
+        {
+          .site-footer [class^=col-]
+          {
+            margin-bottom:30px
+          }
+        }
+        @media (max-width:767px)
+        {
+          .site-footer
+          {
+            padding-bottom:0
+          }
+          .site-footer .copyright-text,.site-footer .social-icons
+          {
+            text-align:center
+          }
+        }
+        
+        @media (max-width:767px)
+        {
+          .social-icons li.title
+          {
+            display:block;
+            margin-right:0;
+            font-weight:600
+          }
+        }
+        
         h1{
             text-align: center;
             color: white;
             text-shadow: 1px 1px 1px rgb(255, 0, 0), 3px 3px 5px blue;
-        }
-        img{
-            position: absolute;
-            bottom: 0;
-            height: 150px;
-            
         }
         
         
@@ -91,9 +208,10 @@
             box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.438);
         }
         
-        .navbar .logo {
-            cursor: pointer;
-            font-family: Lacquer;
+        .navbar .logo img{
+            width: 70px;
+            margin-top: 1vh;
+
         }
         
         
@@ -132,7 +250,16 @@
             transform: scale(1.1);
             transition: 0.5s ease-out;
             color: rgb(0, 0, 0);
-            background: rgb(168,235,18); }
+            background: rgb(168,235,18); 
+        }
+
+
+
+        
+
+
+
+
 
 
               
@@ -143,7 +270,7 @@
     <div class="navbar">
 	
         <div class="logo">
-            <h2>Logo</h2>
+            <h2><img src="img/Logo.png" alt=""></h2>
         </div>
         
         
@@ -158,7 +285,7 @@
     <br>
     <br>
     <h1>Password Genarator</h1>
-    <img src="img/icons8-digital-buddies-96.png" alt="">
+    <img style="position: absolute; bottom: 7vh;height: 150px;" src="img/icons8-digital-buddies-96.png" alt="">
 
 
     <div class="categorize">
@@ -183,6 +310,40 @@
         <button>Copy</button>
     </div>
 
+    
+    <!-- Site footer -->
+    <footer class="site-footer">
+        <div class="container">
+          <div class="row">
+            <div class="about">
+              <h6>About</h6>
+              <p class="text-justify">Scanfcode.com <i>CODE WANTS TO BE SIMPLE </i> is an initiative  to help the upcoming programmers with the code. Scanfcode focuses on providing the most efficient code or snippets as the code wants to be simple. We will help programmers build up concepts in different programming languages that include C, C++, Java, HTML, CSS, Bootstrap, JavaScript, PHP, Android, SQL and Algorithm.</p>
+            </div>
+    
+            <div class="quicklinks">
+              <h6>Quick Links</h6>
+              <ul class="footer-links">
+                <li><a href="">About Us</a></li>
+                <li><a href="">Contact Us</a></li>
+                <li><a href="">Contribute</a></li>
+                <li><a href="">Privacy Policy</a></li>
+                <li><a href="">Sitemap</a></li>
+              </ul>
+            </div>
+          </div>
+          <hr>
+        </div>
+        <div class="container">
+          <div class="row">
+            <div class="col-md-8 col-sm-6 col-xs-12">
+              <p class="copyright-text">Copyright &copy; 2017 All Rights Reserved by 
+                <a href="index.html">PasswordGenerator</a>.
+              </p>
+            </div>
+          </div>
+        </div>
+    </footer>
+    
 
 
     <script>
