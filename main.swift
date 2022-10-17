@@ -16,5 +16,13 @@ let length_for_password = 12
 
 let characters = lower_case + upper_case + vowels + numbers + symbols
 
+func passwordGenerator(characters: String, length: Int) -> String {
+    return "hey"
+}
+
+func readablePasswordGenerator(characters: String, length: Int) -> String {
+    return "hey rpw"
+}
+
 print("Hello, World!")
 
