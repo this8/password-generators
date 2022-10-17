@@ -14,5 +14,7 @@ let numbers = "0123456789"
 let symbols = "`-=[];,./~!@#$%^&*()_+{}|:<>?"
 let length_for_password = 12
 
+let characters = lower_case + upper_case + vowels + numbers + symbols
+
 print("Hello, World!")
 
