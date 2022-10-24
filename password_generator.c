@@ -1,4 +1,3 @@
-// password generator in C
 
 #include <math.h>
 #include <stdio.h>
