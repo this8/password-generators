@@ -1,4 +1,3 @@
-// password generator in C
 
 #include <math.h>
 #include <stdio.h>
@@ -6,12 +5,10 @@
 #include <time.h>
 
 
-void randomPasswordGeneration(int N)
+void randomPasswordCreation(int length)
 {
 
-	int i = 0;
-
-	int randomizer = 0;
+	int i,random = 0;
 
 
 	srand((unsigned int)(time(NULL)));
@@ -20,41 +17,41 @@ void randomPasswordGeneration(int N)
 	char numbers[] = "0123456789";
 
 
-	char letter[] = "abcdefghijklmnoqprstuvwyzx";
+	char letters[] = "abcdefghijklmnoqprstuvwyzx";
 
 	
-	char LETTER[] = "ABCDEFGHIJKLMNOQPRSTUYWVZX";
+	char LETTERS[] = "ABCDEFGHIJKLMNOQPRSTUYWVZX";
 
 	
 	char symbols[] = "!@#$^&*?";
 
 
-	char password[N];
+	char password[length];
 
 	
-	randomizer = rand() % 4;
+	random= rand() % 4;
 
-	// Iterate over the range [0, N]
-	for (i = 0; i < N; i++) {
+	
+	for (i = 0; i < length; i++) {
 
-		if (randomizer == 1) {
+		if (random == 1) {
 			password[i] = numbers[rand() % 10];
-			randomizer = rand() % 4;
+			random = rand() % 4;
 			printf("%c", password[i]);
 		}
-		else if (randomizer == 2) {
+		else if (random == 2) {
 			password[i] = symbols[rand() % 8];
-			randomizer = rand() % 4;
+			random = rand() % 4;
 			printf("%c", password[i]);
 		}
-		else if (randomizer == 3) {
-			password[i] = LETTER[rand() % 26];
-			randomizer = rand() % 4;
+		else if (random == 3) {
+			password[i] = LETTERS[rand() % 26];
+			random = rand() % 4;
 			printf("%c", password[i]);
 		}
 		else {
-			password[i] = letter[rand() % 26];
-			randomizer = rand() % 4;
+			password[i] = letters[rand() % 26];
+			random = rand() % 4;
 			printf("%c", password[i]);
 		}
 	}
@@ -63,10 +60,9 @@ void randomPasswordGeneration(int N)
 int main()
 {
 	
-	int N = 10;
+	int length = 10;
 
-
-	randomPasswordGeneration(N);
+	randomPasswordCreation(length);
 
 	return 0;
 }
