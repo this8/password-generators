@@ -31,7 +31,7 @@ void randomPasswordCreation(int length)
 	
 	random= rand() % 4;
 
-	// Iterate over the range [0, N]
+	
 	for (i = 0; i < length; i++) {
 
 		if (random == 1) {
